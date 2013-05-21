@@ -1,10 +1,17 @@
-Program 1 : Write a program to simulate the push/pop functionality of a Stack. The requirements are
+1.1 Assume there is a Stack data structure available capable of holding only Integers.
+	  Now suppose a client performs an intermixed sequence of Push and Pop operations onto the stack.
+		The push operations put the integers 0 through 9 in order onto the stack; the pop operations print out the return values.
 
-a) It should be possible to PUSH numbers (0 - 9) on the stack only in the proper sequence. Meaning, the allowed sequence is PUSH 0, PUSH 1, PUSH 2, PUSH 3, PUSH 4, PUSH 5, PUSH 6, PUSH 7, PUSH 8, PUSH9. It should not be possible to skip numbers in between. PUSH 2,  PUSH 4 is not allowed.
+		Given the above scenario, which of the following sequences could not occur and identify the value which caused the sequence to be evaluated as invalid? 
 
-b) Given a random pattern of numbers, the program should be able to validate if it is possible to generate the given pattern using a number of PUSH - POP operations. 
+			4 3 2 1 0 9 8 7 6 5
+			4 6 8 7 5 3 2 9 0 1
+			2 5 6 7 4 8 9 3 1 0
+			4 3 2 1 0 5 6 7 8 9
+			1 2 3 4 5 6 9 8 7 0
+			0 4 6 5 3 8 1 7 2 9
+			1 4 7 9 8 6 5 3 0 2
+			2 1 4 3 6 5 8 7 9 0
 
-For example: the pattern  4 3 2 1 0 9 8 7 6 5  is achievable using the following
-PUSH - POP sequence 
-PUSH 0, PUSH 1, PUSH 2, PUSH 3, PUSH 4, POP 4, POP 3, POP 2, POP 1, POP 0, PUSH 5, PUSH 6, PUSH 7, PUSH 8, PUSH 9, POP 9, POP 8, POP 7, POP 6, POP 5
-The results from the POP commands can be printed on the console to show the pattern. This is a valid pattern and can be achieved using PUSH - POP
+1.2 Write a program to evaluate your results in an automated manner using the Stack implementation(in Java) available at 
+		/challenge/source_code/src/com/botreeconsulting/challenges/stack/Stack.java
